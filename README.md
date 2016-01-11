@@ -12,7 +12,7 @@ $ npm install --save cinematic-system
 ```js
 var cinematicSystem = require('cinematic-system');
 
-cinematicSystem('Rainbow');
+cinematicSystem();
 ```
 ## License
 
