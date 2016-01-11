@@ -10,4 +10,3 @@ describe('basic cinematic rules', function () {
     assert(b, 'was not true');
   });
 });
-
