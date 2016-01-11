@@ -1,7 +1,10 @@
 var Basic = (function () {
     function Basic() {
-        return true;
     }
+    Basic.Scene = function () {
+        return true;
+    };
+    Basic.defaultConviction = 1;
     return Basic;
 })();
 module.exports = Basic;

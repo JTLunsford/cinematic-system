@@ -25,6 +25,7 @@ gulp.task('tsconfig', function() {
     }
   });
 
+
   return gulp.src(["src/**/*.ts","src/*.ts"])
     .pipe(tsConfig())
     .pipe(gulp.dest('.'));
