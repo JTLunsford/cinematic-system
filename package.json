@@ -39,7 +39,7 @@
   "scripts": {
     "prepublish": "gulp prepublish",
     "test": "gulp",
-    "publish": " gulp && git add . && git commit -am 'publish' && npm version patch && npm publish && git push --follow-tags"
+    "publish": "npm version patch && npm publish && git push --follow-tags"
   },
   "dependencies": {
     "async": "^1.5.2",
