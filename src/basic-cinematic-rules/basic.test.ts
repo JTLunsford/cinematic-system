@@ -33,9 +33,15 @@ describe('basic cinematic rules', function () {
         counts[result]=1;
       }
     });
+    var highValue = 0;
+    var highDie = 0;
     _.each(counts,(hits,key)=>{
-      console.log(key,hits);
+      if(hits>highValue){
+        highValue = hits;
+        highDie = key;
+      }
     });
-    assert(true, 'was not a bell curve');
+
+    assert(highDie > 9 && highDie < 12, 'was not a bell curve between 10 and 11');
   });
 });
