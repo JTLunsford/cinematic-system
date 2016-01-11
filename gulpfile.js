@@ -1,20 +1,35 @@
 'use strict';
 var path = require('path');
 var gulp = require('gulp');
-var eslint = require('gulp-eslint');
 var excludeGitignore = require('gulp-exclude-gitignore');
 var mocha = require('gulp-mocha');
 var istanbul = require('gulp-istanbul');
 var nsp = require('gulp-nsp');
 var plumber = require('gulp-plumber');
 var coveralls = require('gulp-coveralls');
+var gulpTsConfig = require('gulp-tsconfig');
 
-gulp.task('static', function () {
-  return gulp.src('**/*.js')
-    .pipe(excludeGitignore())
-    .pipe(eslint())
-    .pipe(eslint.format())
-    .pipe(eslint.failAfterError());
+
+gulp.task('tsconfig', function() {
+  var tsConfig = gulpTsConfig({
+    tsOrder: [
+      'src/**/*.ts',
+      'src/*.ts'
+    ],
+    tsConfig: {
+      "compilerOptions": {
+        "target": "ES3",
+        "sourceMap": true,
+        "module": "commonjs"
+      }
+    }
+  });
+
+  return gulp.src(["src/**/*.ts","src/*.ts"])
+    .pipe(tsConfig())
+    .pipe(gulp.dest('.'));
+
+  // --> result is a tsconfig.json file.
 });
 
 gulp.task('nsp', function (cb) {
@@ -22,7 +37,7 @@ gulp.task('nsp', function (cb) {
 });
 
 gulp.task('pre-test', function () {
-  return gulp.src('lib/**/*.js')
+  return gulp.src(['src/**/*.test.js','src/*.test.js'])
     .pipe(excludeGitignore())
     .pipe(istanbul({
       includeUntested: true
@@ -33,7 +48,7 @@ gulp.task('pre-test', function () {
 gulp.task('test', ['pre-test'], function (cb) {
   var mochaErr;
 
-  gulp.src('test/**/*.js')
+  gulp.src(['src/**/*.test.js','src/*.test.js'])
     .pipe(plumber())
     .pipe(mocha({reporter: 'spec'}))
     .on('error', function (err) {
@@ -46,7 +61,7 @@ gulp.task('test', ['pre-test'], function (cb) {
 });
 
 gulp.task('watch', function () {
-  gulp.watch(['lib/**/*.js', 'test/**'], ['test']);
+  gulp.watch(['src/**/*.ts','src/*.ts'], ['default']);
 });
 
 gulp.task('coveralls', ['test'], function () {
@@ -59,4 +74,4 @@ gulp.task('coveralls', ['test'], function () {
 });
 
 gulp.task('prepublish', ['nsp']);
-gulp.task('default', ['static', 'test', 'coveralls']);
+gulp.task('default', ['tsconfig', 'test', 'coveralls']);

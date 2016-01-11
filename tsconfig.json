@@ -1,0 +1,10 @@
+{
+    "compilerOptions": {
+        "target": "ES3",
+        "sourceMap": true,
+        "module": "commonjs"
+    },
+    "files": ["src/basic-cinematic-rules/basic.test.ts",
+        "src/basic-cinematic-rules/basic.ts"
+    ]
+}
