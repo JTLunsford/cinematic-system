@@ -16,6 +16,7 @@
     ""
   ],
   "devDependencies": {
+    "async": "^1.5.2",
     "eslint-config-xo-space": "^0.7.0",
     "gulp": "^3.9.0",
     "gulp-coveralls": "^0.1.0",
@@ -25,7 +26,8 @@
     "gulp-mocha": "^2.0.0",
     "gulp-nsp": "^2.1.0",
     "gulp-plumber": "^1.0.0",
-    "gulp-tsconfig": "^0.1.0"
+    "gulp-tsconfig": "^0.1.0",
+    "lodash": "^3.10.1"
   },
   "eslintConfig": {
     "extends": "xo-space",
