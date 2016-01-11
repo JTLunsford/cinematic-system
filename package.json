@@ -38,6 +38,11 @@
   "repository": "YurikoEX/cinematic-system",
   "scripts": {
     "prepublish": "gulp prepublish",
-    "test": "gulp"
+    "test": "gulp",
+    "publish": " gulp && git add . && git commit -am 'publish' && npm version patch && npm publish && git push --follow-tags"
+  },
+  "dependencies": {
+    "async": "^1.5.2",
+    "lodash": "^3.10.1"
   }
 }
