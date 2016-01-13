@@ -43,6 +43,7 @@
   },
   "dependencies": {
     "async": "^1.5.2",
-    "lodash": "^3.10.1"
+    "lodash": "^3.10.1",
+    "randopeep": "^0.2.5"
   }
 }

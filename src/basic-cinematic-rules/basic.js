@@ -1,20 +1,9 @@
 ///<reference path="../../typings/tsd.d.ts"/>
 'use strict';
-var _ = require('lodash');
-var Basic = (function () {
-    function Basic() {
+var basic = (function () {
+    function basic() {
     }
-    Basic.roll = function (quantity, die) {
-        if (quantity === void 0) { quantity = 1; }
-        if (die === void 0) { die = 1; }
-        return _.sum(_.map(new Array(quantity), function () {
-            return 1 + Math.floor(Math.random() * die);
-        }));
-    };
-    Basic.defaultConviction = 1;
-    Basic.defaultRenown = 1;
-    Basic.defaultWits = 1;
-    return Basic;
+    return basic;
 })();
-module.exports = Basic;
+module.exports = basic;
 //# sourceMappingURL=basic.js.map

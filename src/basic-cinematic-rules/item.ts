@@ -3,12 +3,8 @@
 
 import _ = require('lodash');
 
-class basic {
-  constructor(){
-
-  }
+class item {
 
 }
 
-
-export = basic;
+export = item;

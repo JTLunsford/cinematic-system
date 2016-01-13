@@ -4,7 +4,14 @@
         "sourceMap": true,
         "module": "commonjs"
     },
-    "files": ["src/basic-cinematic-rules/basic.test.ts",
-        "src/basic-cinematic-rules/basic.ts"
+    "files": ["src/basic-cinematic-rules/basic.ts",
+        "src/basic-cinematic-rules/character.test.ts",
+        "src/basic-cinematic-rules/character.ts",
+        "src/basic-cinematic-rules/dice.test.ts",
+        "src/basic-cinematic-rules/dice.ts",
+        "src/basic-cinematic-rules/enums/conclusion.ts",
+        "src/basic-cinematic-rules/enums/rank.ts",
+        "src/basic-cinematic-rules/interfaces/charOpts.ts",
+        "src/basic-cinematic-rules/item.ts"
     ]
 }
