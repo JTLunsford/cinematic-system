@@ -5,13 +5,23 @@
         "module": "commonjs"
     },
     "files": ["src/basic-cinematic-rules/basic.ts",
-        "src/basic-cinematic-rules/character.test.ts",
-        "src/basic-cinematic-rules/character.ts",
-        "src/basic-cinematic-rules/dice.test.ts",
-        "src/basic-cinematic-rules/dice.ts",
-        "src/basic-cinematic-rules/enums/conclusion.ts",
-        "src/basic-cinematic-rules/enums/rank.ts",
-        "src/basic-cinematic-rules/interfaces/charOpts.ts",
-        "src/basic-cinematic-rules/item.ts"
+        "src/basic-cinematic-rules/Character.test.ts",
+        "src/basic-cinematic-rules/Character.ts",
+        "src/basic-cinematic-rules/CharacterStatic.ts",
+        "src/basic-cinematic-rules/Dice.test.ts",
+        "src/basic-cinematic-rules/Dice.ts",
+        "src/basic-cinematic-rules/enums/Conclusion.ts",
+        "src/basic-cinematic-rules/enums/Rank.ts",
+        "src/basic-cinematic-rules/enums/Slot.ts",
+        "src/basic-cinematic-rules/enums/Tier.ts",
+        "src/basic-cinematic-rules/enums/Wound.ts",
+        "src/basic-cinematic-rules/interfaces/ICharacter.ts",
+        "src/basic-cinematic-rules/interfaces/ICharOpts.ts",
+        "src/basic-cinematic-rules/interfaces/IItem.ts",
+        "src/basic-cinematic-rules/interfaces/IItemOpts.ts",
+        "src/basic-cinematic-rules/interfaces/IStat.ts",
+        "src/basic-cinematic-rules/interfaces/IStatModifier.ts",
+        "src/basic-cinematic-rules/interfaces/IStatTree.ts",
+        "src/basic-cinematic-rules/Item.ts"
     ]
 }

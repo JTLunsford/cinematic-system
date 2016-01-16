@@ -1,7 +1,7 @@
 ///<reference path="../../../typings/tsd.d.ts"/>
 'use strict';
 
-enum conclusion {
+enum Conclusion {
   catastrophic = -4,
   failure,
   miss,
@@ -13,4 +13,4 @@ enum conclusion {
   triumph
 }
 
-export = conclusion;
+export = Conclusion;

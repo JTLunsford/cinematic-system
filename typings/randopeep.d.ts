@@ -10,9 +10,9 @@ declare module "randopeep" {
   }
 
   interface Randopeep {
-    name(opts?:Options, cnt?:number = 1): string;
-    job(cnt?:number = 1): string;
-    invention(cnt?:number = 1): string;
+    name(opts?:Options, cnt?:number): string;
+    job(cnt?:number): string;
+    invention(cnt?:number): string;
   }
 
   var randopeep: Randopeep;

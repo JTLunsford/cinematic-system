@@ -1,7 +1,7 @@
 ///<reference path="../../../typings/tsd.d.ts"/>
 'use strict';
 
-enum rank {
+enum Rank {
   disabled = -4,
   weak,
   poor,
@@ -13,4 +13,4 @@ enum rank {
   godlike
 }
 
-export = rank;
+export = Rank;

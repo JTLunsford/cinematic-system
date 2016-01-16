@@ -16,4 +16,4 @@ var dice = (function () {
     return dice;
 })();
 module.exports = dice;
-//# sourceMappingURL=dice.js.map
+//# sourceMappingURL=Dice.js.map
